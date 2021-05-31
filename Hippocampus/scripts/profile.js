@@ -1,13 +1,46 @@
 //TABLE INVISIBLE
-var table = document.getElementsByClassName("schedule-table")[0];
+let table = document.getElementsByClassName("schedule-table")[0];
 table.style.display = "none";
 
-//Canvas Button
-const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
-ctx.font = "10px Comic Sans MS";
-ctx.textAlign = "center";
-//ctx.fillStyle = "#4ECCA3";
-//ctx.fillRect(0, 0, 100, 100);
-ctx.fillStyle = "White";
-ctx.fillText("Cor", canvas.width/2, canvas.height/2 + 3);
+let inputCourses = document.getElementById("courses-input");
+let colorButtton = document.getElementById("color-btn");
+let ul = document.getElementById("courses");
+
+
+
+
+/*
+let button = document.getElementById("item-button");
+let itemButtons = document.getElementsByClassName("remove");
+
+function criarElemento() {
+  let li = document.createElement("li");
+
+  let xButton = document.createElement("button");
+  xButton.innerHTML = "X";
+  xButton.className = "remove";
+
+  li.appendChild(xButton);
+
+  let text = document.createTextNode(input.value);
+  li.appendChild(text);
+
+  ul.appendChild(li);
+
+  input.value = "";
+  buttonEvents();
+}
+
+function deleteItem() {
+  this.parentElement.remove();
+}
+
+function buttonEvents() {
+  for (let i = 0; i < itemButtons.length; i++) {
+    itemButtons[i].addEventListener("click", deleteItem);
+  }
+}
+
+button.addEventListener("click", criarElemento);
+buttonEvents();
+*/
