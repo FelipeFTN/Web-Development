@@ -123,7 +123,7 @@ p{
 .color:active{
     box-shadow: 0px 0px;
 }
-#send-btn{
+#create-btn{
     width: 60px;
     height: 30px;
     border-radius: 10px;
@@ -134,9 +134,28 @@ p{
     outline: none;
     transition-duration: 1s;
 }
-#send-btn:hover{
+#create-btn:hover{
     box-shadow: -2px -2px;
 }
-#send-btn:active{
+#create-btn:active{
     box-shadow: 0px 0px;
 }
+.delete-btn{
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 5px;
+    background-color: #4ECCA3;
+    color: white;
+    border: 0px;
+    outline: none;
+    transition-duration: 1s;
+}
+.delete-btn:hover{
+    box-shadow: -2px -2px;
+}
+.delete-btn:active{
+    box-shadow: 0px 0px;
+}
+
+
