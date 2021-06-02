@@ -156,5 +156,8 @@ p{
 .delete-btn:active{
     box-shadow: 0px 0px;
 }
+li{
+    font-family: 'Heebo';
+}
 
 

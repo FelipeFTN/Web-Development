@@ -8,12 +8,21 @@ let ul = document.getElementById("courses");
 let colorBtn = document.getElementById('color-btn');
 let color = 0;
 let courses = [];
+let colors = ['#4ECCA3', 'Red', 'Blue', 'Green', 'Purple', 'Orange'];
+function changeColor() {
+    color += 1;
+    if(color >= colors.length){
+        color = 0;
+    }
+    colorBtn.style.backgroundColor = colors[color];
+}
 //CREATE CURSES LI
 function createElement(){
     if (input.value.trim() != "") {
         let inputText = document.createTextNode(input.value);
         let li = document.createElement("li");
         courses.push(inputText);
+        li.style.color = colors[color];
         li.appendChild(inputText);
         ul.appendChild(li);
         input.value = "";
@@ -28,14 +37,6 @@ document.addEventListener('keydown', (event) => {
         createElement();
     }
 });
-function changeColor() {
-    let colors = ['#4ECCA3', 'Red', 'Blue', 'Green', 'Purple', 'Orange'];
-    color += 1;
-    colorBtn.style.backgroundColor = colors[color];
-    if(color == colors.length){
-        color = 0;
-    }
-}
 createBtn.addEventListener("click", createElement);
 colorBtn.addEventListener("click", changeColor);
 /*
