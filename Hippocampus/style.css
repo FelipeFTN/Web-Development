@@ -156,8 +156,12 @@ p{
 .delete-btn:active{
     box-shadow: 0px 0px;
 }
-li{
+.coursesList{
     font-family: 'Heebo';
+}
+.coursesList:hover{
+    color: rgba(207, 59, 59, 0.87);
+    cursor: pointer;
 }
 
 

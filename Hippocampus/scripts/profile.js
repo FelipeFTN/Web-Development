@@ -23,12 +23,24 @@ function createElement(){
         let li = document.createElement("li");
         courses.push(inputText);
         li.style.color = colors[color];
+        li.className = "coursesList";
         li.appendChild(inputText);
         ul.appendChild(li);
         input.value = "";
+
+        li.addEventListener("click", deleteLi);
+
     } else {
         return false;
     }
+}
+function deleteLi(){
+    for(let i = 0; i < courses.length; i++){
+     if(i = this.value){
+         
+     }   
+    }
+    this.remove();
 }
 document.addEventListener('keydown', (event) => {
     let name = event.key;
@@ -37,6 +49,7 @@ document.addEventListener('keydown', (event) => {
         createElement();
     }
 });
+
 createBtn.addEventListener("click", createElement);
 colorBtn.addEventListener("click", changeColor);
 /*
