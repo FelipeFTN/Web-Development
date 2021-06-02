@@ -21,14 +21,14 @@ function createElement(){
     if (input.value.trim() != "") {
         let inputText = document.createTextNode(input.value);
         let li = document.createElement("li");
-        courses.push(inputText);
+        courses.push(input.value);
         li.style.color = colors[color];
         li.className = "coursesList";
         li.appendChild(inputText);
         ul.appendChild(li);
         input.value = "";
 
-        li.addEventListener("click", deleteLi);
+        li.addEventListener("click",  deleteLi);
 
     } else {
         return false;
@@ -36,10 +36,12 @@ function createElement(){
 }
 function deleteLi(){
     for(let i = 0; i < courses.length; i++){
-     if(i = this.value){
-         
-     }   
+        if(courses[i] == this.innerText){
+            let deleteIndex = courses.indexOf(this.innerText);
+            courses.splice(deleteIndex, 1);
+        }
     }
+    console.log(this.value);
     this.remove();
 }
 document.addEventListener('keydown', (event) => {
