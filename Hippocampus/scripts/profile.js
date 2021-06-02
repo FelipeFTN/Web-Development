@@ -8,7 +8,7 @@ let ul = document.getElementById("courses");
 let colorBtn = document.getElementById('color-btn');
 let color = 0;
 let courses = [];
-let colors = ['#4ECCA3', 'Red', 'Blue', 'Green', 'Purple', 'Orange'];
+const colors = ['#4ECCA3', 'Red', 'Blue', 'Green', 'Purple', 'Orange'];
 function changeColor() {
     color += 1;
     if(color >= colors.length){
@@ -27,9 +27,7 @@ function createElement(){
         li.appendChild(inputText);
         ul.appendChild(li);
         input.value = "";
-
         li.addEventListener("click",  deleteLi);
-
     } else {
         return false;
     }
@@ -51,15 +49,9 @@ document.addEventListener('keydown', (event) => {
         createElement();
     }
 });
-
 createBtn.addEventListener("click", createElement);
 colorBtn.addEventListener("click", changeColor);
-/*
 //IMPLEMENT ON TABLE
 let pause = 5.00;
 let initialTime = 12.00;
 let finalTime = 18.00;
-for(let s = 0; s < 4; s++){//IMPLEMENT ON SUNDAY
-    
-}
-*/
