@@ -70,16 +70,114 @@ confirmBtn.addEventListener("click", confirmPressed);
 let pause = 5.00;
 let initialTime = 12.00;
 let finalTime = 18.00;
-let tableContent = ['time', 'sunday', 'monday', 'thuesday', 'wednessday', 'thursday', 'saturday'];
+let tableContent = ['time', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
 
 function confirmPressed(){
     table.style = null;
-    for(let i = 1; i < 6; i+=2){
-        let addPause = tableContent[1]+i;
-        document.getElementById(addPause).innerHTML = "Pausa";
+    let x = 0;
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[1]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[1]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
     }
     for(let i = 0; i < 6; i+=2){
-        let addCourses = tableContent[1]+i;
-        document.getElementById(addCourses).innerHTML = courses[courses.length];
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[2]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[2]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
+    }
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[3]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[3]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
+    }
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[4]+i;
+        document.getElementById(addCourses).innerHTML= courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[4]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
+    }
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[5]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[5]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
+    }
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[6]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[6]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
+    }
+    for(let i = 0; i < 6; i+=2){
+        if(x >= courses.length){
+            x = 0;
+        }
+        let addCourses = tableContent[7]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        x++;
+    }
+    for(let j = 0; j < 6; j++){
+        let checkCourses = tableContent[7]+j;
+        let sundayElement = document.getElementById(checkCourses);
+        if(sundayElement.innerHTML == ""){
+            sundayElement.innerHTML = "Pausa";
+        }
     }
 }
