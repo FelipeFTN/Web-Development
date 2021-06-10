@@ -71,7 +71,6 @@ colorBtn.addEventListener("click", changeColor);
 //IMPLEMENT ON TABLE
 let pause = 5.00;
 let tableContent = ['time', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-
 function confirmPressed(){
     table.style.display = null;
     let x = 0;
@@ -184,6 +183,12 @@ function confirmPressed(){
     //FILL TIME
     let initialSchedule = document.getElementById("initialTime");
     let intervalSchedule = document.getElementById("intervalTime");
+    if(initialSchedule.value == ""){
+        initialSchedule = "00:00";
+    }
+    if(intervalSchedule.value == ""){
+        intervalSchedule = "00:00";
+    }
     let initialTime = initialSchedule.value.split(":");
     let intervalTime = intervalSchedule.value.split(":");
     let nextTime = parseInt(initialTime[0], 10);
@@ -206,4 +211,14 @@ function confirmPressed(){
         nextTime += parseInt(intervalTime[0], 10);
         minutes += parseInt(intervalTime[1], 10);
     }
+}
+for(let j = 1; j < tableContent.length-1; j++){
+    for(let i = 0; i < 6; i++){
+        let checkLi = tableContent[j]+i;
+        let liTable = document.getElementById(checkLi);
+        liTable.addEventListener('click', deleteLiTable);
+    }
+}
+function deleteLiTable(){
+    this.innerHTML = "";
 }
