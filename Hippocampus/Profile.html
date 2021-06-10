@@ -3,22 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>Hippocampus</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/styleProfile.css">
     </head>
     <body>
-        <a href="index.html"><img src="images/back-arrow.png" alt="Back-Arrow" class="back-btn"></a>
+        <a href="index.html"><img src="img/back-arrow.png" alt="Back-Arrow" class="back-btn"></a>
         <center>
             <h1>VAMOS CRIAR SEU PLANO DE ESTUDOS!</h1>
             <br>
             <button class="color" id="color-btn">Cor</button>
             <input type="text" placeholder="Materia" id="courses-input" required> 
             <button id="create-btn">Criar</button>
-
             <ul id="courses">
-                
             </ul>
-            <button id="confirm">Confirmar</button>
             <!-- Tabela Agenda -->
+            <h4>Horários</h4>
+            <br>
+            <label>Inicio dos estudos</label><input id="initialTime" class="courses-input-number" type="time" placeholder="Horario Incial" required><br>
+            <label>Intervalo entre as Pausas</label><input id="intervalTime" class="courses-input-number" type="time" placeholder="Horario Final" required><br>
+            
+            <button id="confirm">Confirmar</button>
+            
             <table class="schedule-table">
                     <thead>
                         <tr>

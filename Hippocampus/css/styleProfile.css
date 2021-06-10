@@ -9,7 +9,7 @@
 body{
     background-color: #393E46;
 }
-h1, h2, h3{
+h1, h2, h3, h4{
     margin: 30px;
     font-family: 'Lobster', cursive;
     text-shadow: 5px 5px #232931;
@@ -167,4 +167,18 @@ p{
 .coursesList:hover{
     color: rgba(207, 59, 59, 0.87);
     cursor: pointer;
+}
+.courses-input-number{
+    border: 2px solid #4ECCA3;
+    border-radius: 8px;
+    background-color: #232931;
+    outline: none;
+    padding-left: 5px;
+    color: #fff;
+    height: 25px;
+    margin: 10px;
+    width: 85px;
+}
+label{
+    color: White;
 }
