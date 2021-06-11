@@ -212,7 +212,7 @@ function confirmPressed(){
         minutes += parseInt(intervalTime[1], 10);
     }
 }
-for(let j = 1; j < tableContent.length-1; j++){
+for(let j = 0; j < tableContent.length; j++){
     for(let i = 0; i < 6; i++){
         let checkLi = tableContent[j]+i;
         let liTable = document.getElementById(checkLi);

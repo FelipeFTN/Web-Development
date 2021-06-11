@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Cadastro</title>
 	<link rel="stylesheet" href="css/cadastro.css"/>
 </head>
@@ -8,72 +9,68 @@
 
 	<!--  Campo para dividir seções-->
 <section>
-	<div class="container">
-		<h2>Faça seu Cadastro Aqui!</h2>
-	
+	<form action="">
+
+		<div class="container">
+			<h2>Faça seu Cadastro Aqui!</h2>
+			
 			<!-- Campo text name fist -->
 			<div class="row100">
 				<div class="col">
 					<div class="inputBox">
-						<input type="text" name="" required="required">
-						<span class="text"> Nome Inteiro</span>
+						<input type="text" id="inputName" name="" required="required">
+						<span class="text">Nome</span>
 						<span class="line"></span>
+					</div>
 				</div>
-			</div>
-		
-			<!-- Campo text name last -->
-
+				
+				<!-- Campo text name last -->
+				
 			
 				<div class="col">
 					<div class="inputBox">
-						<input type="password" name="" required="required">
-						<span class="text">senha</span>
+						<input type="password" id="inputPass" name="" required="required">
+						<span class="text">Senha</span>
 						<span class="line"></span>
+					</div>
 				</div>
 			</div>
-		</div>
 			<!-- Campo text Email -->
-
+			
 			<div class="row100">
 				<div class="col">
 					<div class="inputBox">
-						<input type="text" name="" required="required">
+						<input type="text" id="inputEmail" name="" required="required">
 						<span class="text">Email</span>
 						<span class="line"></span>
+					</div>
 				</div>
-			</div>
-			<!-- Campo tel Numero -->
-
+				<!-- Campo tel Numero -->
+				
 				<div class="col">
 					<div class="inputBox">
-						<input type="tel" name="" required="required">
+						<input type="tel" name="" id="inputNumber" required="required">
 						<span class="text">Numero</span>
 						<span class="line"></span>
+					</div>
 				</div>
 			</div>
-		</div>
 			<!-- Campo textarea -->
-
-			<div class="row100">
-				<div class="col">
-					<div class="inputBox textarea">
-						<textarea required="required"></textarea>
-						<span class="text">Deixe uma mensagem aqui...</span>
-						<span class="line"></span>
-				</div>
+			
+			<div class="inputBox textarea">
+				
 			</div>
-
-	</div>
-
+			
 			<!-- Campo Button submit -->
-
-
+			
+			
 			<div class="row100">
 				<div class="col">
-					<a href="login.html"><input type="submit" value="send"></a>
+					<input type="submit" value="send" id="send">
 				</div>
 			</div>
 		</div>
+	</form>
 </section>
 </body>
 </html>

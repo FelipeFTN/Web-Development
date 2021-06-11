@@ -13,7 +13,6 @@ h1, h2, h3, h4{
     margin: 30px;
     font-family: 'Lobster', cursive;
     text-shadow: 5px 5px #232931;
-    font-size: 35px;
     margin-top: 40px;
     color: #4ECCA3;
 }
@@ -73,6 +72,11 @@ p{
     color: rgb(200, 247, 255);
     font-family: 'Heebo';
     min-width: 50px;
+    height: 20px;
+    cursor: default;
+}
+.schedule-table, td{
+    cursor: pointer;
 }
 .schedule-table thead tr{
     background-color: #4ECCA3;

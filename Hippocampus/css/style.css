@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
-*
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -30,7 +29,12 @@ body
     font-weight: 700;
     font-size: 2em;
     text-decoration: none;
-
+}
+#header .logo:hover{
+    color: #393E46;
+}
+a:hover{
+    color: #393E46;
 }
 #header .navigation
 {
@@ -49,6 +53,10 @@ body
     padding: 6px 15px;
     color: #4ECCA3;
     border-radius: 20px;
+    font-size: 18px;
+}
+#header .navigation li a:hover{
+    color: #393E46;
 }
 #header .navigation li a.h
 {
