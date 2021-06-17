@@ -1,4 +1,8 @@
 # Web-Design
 
-- Jokenpo - Pedra papel tesoura + IA
+- Jokenpo - Jogo Pedra Papel Tesoura com inteligencia artificial
+
+- Hippocampus - Website que cria planos de estudos
+
+- Node.js - Estudos da linguagem Node.js
 
