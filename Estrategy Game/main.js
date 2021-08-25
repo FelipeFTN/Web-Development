@@ -1,33 +1,36 @@
 let canvas = document.getElementById('board')
 let ctx = canvas.getContext('2d')
 
-document.addEventListener("keydown", move)
-
-let x = 0
-let y = 0
-let dx = 0
-let dy = 0
-
-function move(event){
-    if(event.key == "ArrowRight"){
-        dx = 20
-    }else if(event.key == "ArrowUp"){
-        dy = -20
-    }else if(event.key == "ArrowDown"){
-        dy = 20
-    }else if(event.key == "ArrowLeft"){
-        dx = -20
-    }
-    x += dx
-    y += dy
-    dx = 0
-    dy = 0
-    console.log("x: ", x, " y: ", y)
-}
-
 function draw(){
-    ctx.clearRect(0, 0, 500, 500)
-    ctx.fillRect(x, y, 50, 50)
+    // Kingdom area
+    ctx.beginPath()
+    ctx.fillStyle = 'Gray'
+    ctx.fillRect(0, 0, 150, 150)
+    // Blue team
+    ctx.beginPath()
+    ctx.fillStyle = 'Blue'
+    ctx.fillRect(0, 0, 50, 50)
+    // Kingdom area    
+    ctx.beginPath()
+    ctx.fillStyle = 'Gray'
+    ctx.fillRect(350, 350, 150, 150)
+    // Red team
+    ctx.beginPath()
+    ctx.fillStyle = 'Red'
+    ctx.fillRect(450, 450, 50, 50)
+    // Base A
+    ctx.beginPath()
+    ctx.fillStyle = 'Black'
+    ctx.fillRect(0, 450, 50, 50)
+    // Base B
+    ctx.beginPath()
+    ctx.fillStyle = 'Black'
+    ctx.fillRect(450, 0, 50, 50)
+    // Base C
+    ctx.beginPath()
+    ctx.fillStyle = 'Black'
+    ctx.fillRect(225, 225, 50, 50)
+
     window.requestAnimationFrame(draw)
 }
 draw()
