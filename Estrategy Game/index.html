@@ -8,7 +8,8 @@
     <title>Estrategy Game</title>
 </head>
 <body>
-    <canvas id="board" width="500" height="500"></canvas>
+    <canvas id="board" width="500" height="500" onmousemove="showCoords(event)" onmouseout="clearCoords()"></canvas>
+    <p id="demo"></p>
     <p>Vermelho e Azul = Reinos/Kingdoms</p>
     <p>Bloco cinza = Demarcação dos Reinos</p>
     <p>Pretos = Pontos de Conquista</p>

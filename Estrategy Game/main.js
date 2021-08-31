@@ -51,9 +51,9 @@ function table() {
 
 }
 
-function army(x, y, n) {
+function army(x, y, n, c) {
     ctx.beginPath();
-    ctx.fillStyle = "Red";
+    ctx.fillStyle = c;
     ctx.font = "30px Georgia";
     ctx.arc(x + 25, y + 25, 25, 0, 2 * Math.PI, false);
     ctx.fill();
@@ -65,9 +65,19 @@ function army(x, y, n) {
 
 function draw(){
     table()
-    army(0, 0, 5)
-    
 
     window.requestAnimationFrame(draw)
 }
+
+function showCoords(event) {
+  var x = event.clientX;
+  var y = event.clientY;
+  var coor = "X coords: " + x + ", Y coords: " + y;
+  document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoords() {
+  document.getElementById("demo").innerHTML = "";
+}
+
 draw()
