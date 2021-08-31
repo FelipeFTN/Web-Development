@@ -2,6 +2,26 @@ let canvas = document.getElementById('board')
 let ctx = canvas.getContext('2d')
 
 function draw(){
+
+    // Vertical Grid
+    for (let i = 50; i < 500; i+=50){
+        ctx.beginPath();
+        ctx.setLineDash([2, ]);
+        ctx.moveTo(i, 0);
+        ctx.lineTo(i, 500);
+        ctx.stroke();
+
+    // Horizontal Grid
+
+        ctx.beginPath();
+        ctx.setLineDash([2, ]);
+        ctx.moveTo(0, i);
+        ctx.lineTo(500, i);
+        ctx.stroke();
+        ctx.strokeStyle = "Gray"
+    }
+
+
     // Kingdom area
     ctx.beginPath()
     ctx.fillStyle = 'Gray'
@@ -31,16 +51,6 @@ function draw(){
     ctx.fillStyle = 'Black'
     ctx.fillRect(225, 225, 50, 50)
 
-    // Vertical Grid
-    for (let i = 50; i < 500; i+=50){
-        ctx.beginPath()
-        ctx.fillRect(i,0, 1, 500)
-    }
-    // Horizontal Grid
-    for (let j = 50; j < 500; j+=50){
-        ctx.beginPath()
-        ctx.fillRect(0, j, 500, 1)
-    }
 
 
     window.requestAnimationFrame(draw)
