@@ -5,7 +5,7 @@ var IAMove = Math.floor(Math.random(0, 2) * 3);
 
 function IA(){
     //IA
-    
+
     //CONTAR QUANTIDADES DE JOGADAS
     switch (playerMove){
         case 0:
@@ -18,7 +18,7 @@ function IA(){
             scissorsMove = scissorsMove + 1;
         break;
     }
-    
+
     //IDENTIFICAR QUAL FOI MAIS JOGADO
     if (rockMove > paperMove && rockMove > scissorsMove){
         IAMove = 1;
@@ -38,8 +38,9 @@ function IA(){
     } else if (scissorsMove >= 3){
         scissorsMove = 1;
     }
-    
-    switch (IAMove){ //MOVIMENTOS BASICOS
+
+    //MOVIMENTOS BASICOS
+    switch (IAMove){
         case 0:
             IAImg.setAttribute('src', 'images/rock.png');
             IAImg.style.display = "initial";
@@ -53,6 +54,4 @@ function IA(){
             IAImg.style.display = "initial";
         break;
     }
-    
-    
 }
