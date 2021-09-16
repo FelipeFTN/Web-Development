@@ -14,4 +14,10 @@ export class CheckingAccount{
         if(value <= 0) return
         this.balance += value
     }
+
+    transfer(value, account){
+        const withdrawValue = this.withdraw(value)
+        account.deposit(withdrawValue)
+
+    }
 }

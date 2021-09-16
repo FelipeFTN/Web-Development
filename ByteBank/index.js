@@ -20,5 +20,6 @@ const alicesCheckingAccount = new CheckingAccount()
 alicesCheckingAccount.custommer = custommer2
 alicesCheckingAccount.agency = 1002
 
+ricardosCheckingAccount.transfer(500, alicesCheckingAccount)
 
 console.log(alicesCheckingAccount)
