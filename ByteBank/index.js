@@ -14,9 +14,9 @@ class CheckingAccount{
         }
     }
     deposit(value){
-        if(value > 0){
-            this.balance += value
-        }
+        // Early Return Method
+        if(value <= 0) return
+        this.balance += value
     }
 }
 
