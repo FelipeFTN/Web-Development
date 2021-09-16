@@ -12,5 +12,7 @@ Here, I am using some HTML, CSS and Javascript Knowledge to build this projects
 
 - Node.js - Some simple Nodejs modules that I was using to improve my Javascript abilities
 
+- Estrategy Game - A simple Javascript multiplayer game, still in development working with canvas.
+
 - ByteBank - A simple bank system using OOP
 
