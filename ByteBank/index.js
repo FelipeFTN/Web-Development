@@ -5,11 +5,17 @@ class Custommer{
 }
 class CheckingAccount{
     agency
-    balance
+    balance = 0
 
     withdraw(value){
         if(this.balance >= value){
         this.balance -= value 
+        return value
+        }
+    }
+    deposit(value){
+        if(value > 0){
+            this.balance += value
         }
     }
 }
@@ -24,13 +30,12 @@ const custommer2 = new Custommer()
 
 custommer2.name = "Alice"
 custommer2.cpf = 88899910101 
-custommer2.agency = 1002
-custommer2.balance = 0
 custommer2.rg = 123456788
 
 const ricardosCheckingAccount = new CheckingAccount()
 ricardosCheckingAccount.agency = 1001
-ricardosCheckingAccount.balance = 1000
-ricardosCheckingAccount.withdraw(50)
+ricardosCheckingAccount.balance = 500
 
+const withdrawValue = ricardosCheckingAccount.withdraw(50)
+console.log("Valor Sacado: ", withdrawValue)
 console.log(custommer1, ricardosCheckingAccount)
