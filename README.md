@@ -6,7 +6,7 @@ This is a Web design project made for educational purposes using some of the mos
 
 Here, I am using some HTML, CSS and Javascript Knowledge to build this projects
 
-- Jokenpo - A rock paper scissors simple game made with a Artificial inteligence playing against player
+- Jokenpo - A rock paper scissors simple game made with a Artificial inteligence playing against the player
 
 - Hippocampus - A study plan website that organize the subjects according to the time
 
