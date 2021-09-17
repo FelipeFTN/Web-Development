@@ -1,5 +1,6 @@
 import { Custommer } from "./Custommer.js"
 export class CheckingAccount{
+    static accountsNumber = 0
     agency
     _custommer
 
@@ -18,6 +19,7 @@ export class CheckingAccount{
     constructor(custommer, agency){
         this.agency = agency
         this.custommer = custommer
+        CheckingAccount.accountsNumber += 1
     }
     withdraw(value){
         if(this._balance >= value){

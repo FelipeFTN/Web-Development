@@ -9,4 +9,5 @@ const alicesCheckingAccount = new CheckingAccount(custommer2, 1002)
 
 ricardosCheckingAccount.deposit(500)
 
-console.log(ricardosCheckingAccount.custommer)
+console.log(CheckingAccount)
+console.log(alicesCheckingAccount)
