@@ -3,7 +3,7 @@ export class Custommer{
     _cpf
 
     get cpf(){
-        this._cpf
+        return this._cpf
     }
 
     constructor(name, cpf){
