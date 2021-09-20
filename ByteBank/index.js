@@ -1,25 +1,13 @@
 import { Custommer } from "./Custommer.js"
 import { CheckingAccount } from "./CheckingAccount.js"
-const custommer1 = new Custommer()
 
-custommer1.name = "Ricardo"
-custommer1.cpf = 11122233309
-custommer1.rg = 123456789
+const custommer1 = new Custommer("Ricardo", 11122233309)
+const custommer2 = new Custommer("Alice", 11122233308)
 
-const ricardosCheckingAccount = new CheckingAccount()
-ricardosCheckingAccount.agency = 1001
-ricardosCheckingAccount.balance = 500
-ricardosCheckingAccount.custommer = custommer1
+const ricardosCheckingAccount = new CheckingAccount(custommer1, 1001)
+const alicesCheckingAccount = new CheckingAccount(custommer2, 1002)
 
-const custommer2 = new Custommer()
-custommer2.name = "Alice"
-custommer2.cpf = 88899910101 
-custommer2.rg = 123456788
+ricardosCheckingAccount.deposit(500)
 
-const alicesCheckingAccount = new CheckingAccount()
-alicesCheckingAccount.custommer = custommer2
-alicesCheckingAccount.agency = 1002
-
-ricardosCheckingAccount.transfer(500, alicesCheckingAccount)
-
+console.log(CheckingAccount)
 console.log(alicesCheckingAccount)
