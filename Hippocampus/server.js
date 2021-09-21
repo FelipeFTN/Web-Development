@@ -32,3 +32,4 @@ app.get('/plan', plan)
 app.get('/articles', article)
 app.get('/community', community)
 app.listen(3000)
+// teste
