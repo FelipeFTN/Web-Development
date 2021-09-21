@@ -1,5 +1,18 @@
 {
-    "dependencies": {
-        "express": "^4.17.1"
-    }
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "hippocampus",
+  "description": "Beta version of Hippocampus, here, we are trying to implement NodeJs and Bootstrap to our Project.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "keywords": [
+    "Study"
+  ],
+  "author": "Felipe Tenorio & Gabriel Farias",
+  "license": "ISC"
 }
