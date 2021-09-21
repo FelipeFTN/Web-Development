@@ -1,0 +1,19 @@
+.schedule-table, th, td{
+    border: 2px solid #4ECCA3;
+    border-collapse: collapse;
+    padding: 5px;
+    color: rgb(68, 68, 68);
+    font-family: 'Heebo';
+    min-width: 50px;
+    height: 20px;
+    cursor: default;
+}
+.schedule-table, td{
+    cursor: pointer;
+}
+.schedule-table thead tr{
+    background-color: #4ECCA3;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}

@@ -6,15 +6,12 @@ const app = express()
 function index(req, res){
     res.sendFile(__dirname + '/static/index.html')
 }
-
 function login(req, res){
     res.sendFile(__dirname + '/static/login.html')
 }
-
 function plan(req, res){
     res.sendFile(__dirname + '/static/plan.html')
 }
-
 function article(req, res){
     res.sendFile(__dirname + '/static/articles.html')
 }
