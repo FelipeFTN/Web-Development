@@ -1,4 +1,4 @@
-#createPlan, #articles{
+#createPlan, #articles, #community{
     margin: 50px;
     border: 1px solid black;
     width: 100px;
@@ -6,6 +6,6 @@
     cursor: pointer;
     transition-duration: 0.5s;
 }
-#createPlan:hover, #articles:hover{
+#createPlan:hover, #articles:hover, #community:hover{
     box-shadow: 0 3px 3px black;
 }
