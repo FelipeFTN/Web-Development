@@ -1,10 +1,11 @@
-#createPlan{
+#createPlan, #articles{
+    margin: 50px;
     border: 1px solid black;
     width: 100px;
     height: 100px;
     cursor: pointer;
     transition-duration: 0.5s;
 }
-#createPlan:hover{
+#createPlan:hover, #articles:hover{
     box-shadow: 0 3px 3px black;
 }

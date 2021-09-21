@@ -1,15 +1,21 @@
 //Create all actions: Buttons...
 const login = document.getElementById("loginButton");
 const plan = document.getElementById("createPlan");
+const articles = document.getElementById("articles");
 
-login.addEventListener("click", makeLogin)
-plan.addEventListener("click", createPlan)
+login.addEventListener("click", routeLogin)
+plan.addEventListener("click", routePlan)
+articles.addEventListener("click", routeArticles)
 
-function makeLogin(){
+function routeLogin(){
     window.location.href = '/login'
 }
 
-function createPlan(){
+function routePlan(){
     window.location.href = '/plan'
+}
+
+function routeArticles(){
+    window.location.href = '/articles'
 }
 
