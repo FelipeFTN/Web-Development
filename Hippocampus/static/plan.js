@@ -9,6 +9,7 @@ let colorBtn = document.getElementById('color-btn');
 let color = 0;
 let confirmBtn = document.getElementById("confirm");
 let courses = [];
+let colorCourses = [];
 const colors = ['#4ECCA3', '#bd3535', '#4456bd', '#18ad1b', '#6d3ebd', '#bd733e'];
 
 function changeColor() {
@@ -25,6 +26,7 @@ function createElement(){
         let li = document.createElement("li");
         courses.push(input.value);
         li.style.color = colors[color];
+        colorCourses.push(colors[color]);
         li.className = "coursesList";
         li.appendChild(inputText);
         ul.appendChild(li);
@@ -82,18 +84,25 @@ function confirmPressed(){
         let addCourses
         addCourses = tableContent[1]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[2]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[3]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[4]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[5]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[6]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         addCourses = tableContent[7]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
+        document.getElementById(addCourses).style.backgroundColor = colorCourses[i]
         x++;
     }
     for(let j = 0; j < 6; j++){
