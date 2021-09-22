@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login ● Hippocampus</title>
+    <style>
+        #registerLink{
+            font-size: 25px;
+        }
+    </style>
 </head>
 <body>
     <h1>Pagina de Login</h1>
-    <form action="/loginCheck" method="POST">
+    <form action="/login" method="POST">
         <input type="text" name="name" id="username" placeholder="Nome"><br>
         <input type="password" name="password" id="password" placeholder="Senha"><br>
         <input type="submit" value="Login">
     </form>
+    <br>
+    <a id="registerLink" href="/register">Register</a>
 </body>
 </html>
