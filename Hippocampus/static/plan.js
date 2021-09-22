@@ -87,7 +87,7 @@ function confirmPressed(){
         addCourses = tableContent[3]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
         addCourses = tableContent[4]+i;
-        document.getElementById(addCourses).innerHTML= courses[x];
+        document.getElementById(addCourses).innerHTML = courses[x];
         addCourses = tableContent[5]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
         addCourses = tableContent[6]+i;
