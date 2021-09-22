@@ -82,5 +82,5 @@ app.get('/registerPage', (req, res)=>{
 app.get('/articles', article)
 app.get('/community', community)
 app.post('/register', register)
-app.get('/', index)
+app.get('/*', index)
 server.listen(3000, null)

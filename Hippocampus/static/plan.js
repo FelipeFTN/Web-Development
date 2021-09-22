@@ -79,105 +79,60 @@ function confirmPressed(){
         if(x >= courses.length){
             x = 0;
         }
-        let addCourses = tableContent[1]+i;
+        let addCourses
+        addCourses = tableContent[1]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[1]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
-        }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
-        }
-        let addCourses = tableContent[2]+i;
+        addCourses = tableContent[2]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[2]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
-        }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
-        }
-        let addCourses = tableContent[3]+i;
+        addCourses = tableContent[3]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[3]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
-        }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
-        }
-        let addCourses = tableContent[4]+i;
+        addCourses = tableContent[4]+i;
         document.getElementById(addCourses).innerHTML= courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[4]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
-        }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
-        }
-        let addCourses = tableContent[5]+i;
+        addCourses = tableContent[5]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        addCourses = tableContent[6]+i;
+        document.getElementById(addCourses).innerHTML = courses[x];
+        addCourses = tableContent[7]+i;
         document.getElementById(addCourses).innerHTML = courses[x];
         x++;
     }
     for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[5]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
+        let checkCourses
+        let tableElement
+        checkCourses = tableContent[1]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
         }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
+        checkCourses = tableContent[2]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
         }
-        let addCourses = tableContent[6]+i;
-        document.getElementById(addCourses).innerHTML = courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[6]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
+        checkCourses = tableContent[3]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
         }
-    }
-    for(let i = 0; i < 6; i+=2){
-        if(x >= courses.length){
-            x = 0;
+        checkCourses = tableContent[4]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
         }
-        let addCourses = tableContent[7]+i;
-        document.getElementById(addCourses).innerHTML = courses[x];
-        x++;
-    }
-    for(let j = 0; j < 6; j++){
-        let checkCourses = tableContent[7]+j;
-        let sundayElement = document.getElementById(checkCourses);
-        if(sundayElement.innerHTML == ""){
-            sundayElement.innerHTML = "Pausa";
+        checkCourses = tableContent[5]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
+        }
+        checkCourses = tableContent[6]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
+        }
+        checkCourses = tableContent[7]+j;
+        tableElement = document.getElementById(checkCourses);
+        if(tableElement.innerHTML == ""){
+            tableElement.innerHTML = "Pausa";
         }
     }
     //FILL TIME
