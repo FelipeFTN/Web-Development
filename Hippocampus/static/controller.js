@@ -11,7 +11,7 @@ articles.addEventListener("click", routeArticles)
 community.addEventListener("click", routeCommunity)
 home.addEventListener('click', routeHome)
 
-function routeLogin(){window.location.href = '/login'}
+function routeLogin(){window.location.href = '/loginPage'}
 function routePlan(){window.location.href = '/plan'}
 function routeArticles(){window.location.href = '/articles'}
 function routeCommunity(){window.location.href = '/community'}

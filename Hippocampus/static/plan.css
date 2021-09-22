@@ -17,3 +17,6 @@
     text-align: left;
     font-weight: bold;
 }
+input[type=time]::-webkit-datetime-edit-ampm-field {
+    display: none;
+  }
