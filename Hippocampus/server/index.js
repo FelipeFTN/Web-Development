@@ -1,6 +1,7 @@
 const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
+const { response } = require('express')
 
 const app = express()
 const port = 3001
@@ -39,6 +40,7 @@ app.post('/login', (req, res) =>{
                 res.send(result)
             }else{
                 res.send({ message: "Wrong username or password!" })
+                res.send({ message: result.data[0].userEmail + result.data[0].userEmail})
             }
     })
 })
