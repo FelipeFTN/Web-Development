@@ -28,10 +28,9 @@ app.post('/register', (req, res) =>{
 
 app.post('/login', (req, res) =>{
     const userEmail = req.body.userEmail
-    const username = req.body.username
     const password = req.body.password
 
-    db.query("SELECT * FROM users WHERE username = ? AND password = ?", [username, password],
+    db.query("SELECT * FROM users WHERE email = ? AND password = ?", [userEmail, password],
     (err, result) => {
         if(err){
             res.send({err: err})
