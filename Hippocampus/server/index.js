@@ -44,4 +44,4 @@ app.post('/login', (req, res) =>{
     })
 })
 
-app.listen(port, () => console.log(`Hippocampus listening on port 3001!`))
+app.listen(port, () => console.log('Hippocampus listening on port ' + port + '!'))
