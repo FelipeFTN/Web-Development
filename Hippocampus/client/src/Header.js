@@ -3,7 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container'
 
-
+function SignIn() {
+    window.location.href = 'http://localhost:3000/login'
+}
 function Header(){
     return(
         <div className="Header">
@@ -21,16 +23,15 @@ function Header(){
                             Hippocampus
                         </Navbar.Brand>
                     </Container>
+                        <img 
+                        alt="Profile" 
+                        src={process.env.PUBLIC_URL + "Profile.png"}
+                        width="40"
+                        height="40"
+                        class="d-inline-block align-top" 
+                        onClick={SignIn}
+                        />
                 </Navbar>
-            </div>
-            <div className="header_right">
-                <img 
-                alt="Profile" 
-                src={process.env.PUBLIC_URL + "Profile.png"}
-                width="40"
-                height="40"
-                class="d-inline-block align-top" 
-                />
             </div>
         </div>
     )

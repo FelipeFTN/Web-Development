@@ -1,10 +1,14 @@
 import React from 'react'
-import Signin from './Signin'
+import {BrowserRouter, Link, Switch, Route} from 'react-router-dom'
+import SignIn from './SignIn'
+import Header from './Header'
+import Routes from "./Routes"
 
 function App(){
   return (
     <div className="app">
-      <Signin></Signin>
+      <Header></Header>
+      <Routes></Routes>
     </div>
     )
 }

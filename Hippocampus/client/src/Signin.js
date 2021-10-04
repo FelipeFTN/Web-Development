@@ -22,7 +22,7 @@ function Signin() {
       if(response.data.message){
         setLoginStatus(response.data.message)        
       }else{
-        setLoginStatus(response.data[0].username + " Logged!")
+        window.location.href = "http://localhost:3000/" // Redirecionar para A pagina principal
       }
   })
 }
