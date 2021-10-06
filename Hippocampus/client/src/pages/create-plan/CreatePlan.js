@@ -3,9 +3,6 @@ import Navbar from '../../components/Navbar/Navbar'
 
 function CreatePlan(){
 
-    const [initialTime, setInitialTime] = useState('')
-    const [finalTime, setFinalTime] = useState('')
-
     const initialTime = '13.00'
     const finalTime = '19.00'
     let timeI = initialTime
