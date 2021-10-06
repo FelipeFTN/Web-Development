@@ -32,6 +32,7 @@ function SignIn() {
         <button onClick={login}>Login</button>
       </div>
       <h1>{ loginStatus }</h1>
+      <a href="/registro">Não tem uma conta? Crie uma já!</a>
     </div>
   );
 }

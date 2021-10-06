@@ -15,8 +15,8 @@ export const MenuItems = [
         cName: 'nav-links'
     },
     {
-        title: 'Contato',
-        url: '/contato',
+        title: 'Criar Plano',
+        url: '/plano',
         cName: 'nav-links'
     },
     {

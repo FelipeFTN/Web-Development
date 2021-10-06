@@ -6,7 +6,7 @@ import SignUp from './pages/sign-up/SignUp'
 import SignIn from './pages/sign-in/SignIn'
 import Community from './pages/community/Community'
 import Articles from './pages/articles/Articles'
-import Contact from './pages/contact/Contact'
+import CreatePlan from './pages/create-plan/CreatePlan'
 
 function Routes(){
     return(
@@ -16,7 +16,7 @@ function Routes(){
                 <Route path='/login' component={SignIn} />
                 <Route path='/registro' component={SignUp} />
                 <Route path='/comunidade' component={Community} />
-                <Route path='/contato' component={Contact} />
+                <Route path='/plano' component={CreatePlan} />
                 <Route path='/artigos' component={Articles} />
             </Switch>
         </BrowserRouter>
