@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import Navbar from '../../components/Navbar/Navbar'
 import Axios from 'axios';
 
 function SignIn() {
@@ -19,6 +20,7 @@ function SignIn() {
 }
   return (
     <div className="App">
+      <Navbar/>
       <div className="login">
         <h1>Login</h1>
         <input type="text" placeholder="Email" onChange={(e)=>{

@@ -9,7 +9,9 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked }) // https://www.youtube.com/watch?v=fL8cFqhTHwA&ab_channel=BrianDesign ---> 33:03
     }
-
+    handleSignIn = () => {
+        window.location.href = "http://localhost:3000/login"
+    }
     render(){
         return(
             <nav className="NavbarItems">
@@ -28,7 +30,7 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                <Button>Entrar</Button>
+                <Button onClick={this.handleSignIn}>Entrar</Button>
             </nav>
         )
     }
