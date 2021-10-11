@@ -33,8 +33,5 @@ const login = (req, res) => {
         }
     })
 }
-const plan = (req, res) => {
-    
-}
 
 module.exports = {register, login}
