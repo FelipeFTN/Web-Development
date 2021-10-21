@@ -6,16 +6,19 @@ function CreatePlan(){
     const [subject, setSubject] = useState('');
     const [subjects, setSubjects] = useState([]);
     const [time, setTime] = useState({initialTime:"", finalTime:""});
+    // const [timesSchedule, setTimesSchedule] = useState([]);
+    let timesSchedule = []
     const handleAddSubject = () => {
         if(subject !== ''){
             setSubjects([...subjects, subject]);
             console.log(subjects)
         }
     }
-    const handleRemove = () => {
-    }
+    const handleRemove = () => {}
     const handleSubmit = () => {
-        if(time.initialTime !== "" && time.finalTime !== ""){
+        if(time.initialTime !== "" && time.finalTime !== "" && subjects.length !== 0){
+
+            console.log(subjects)
 
             const initialTime = time.initialTime
             const finalTime = time.finalTime
@@ -26,7 +29,10 @@ function CreatePlan(){
             while(parseFloat(timeI) <= parseFloat(finalTime) || parseFloat(timeF) <= parseFloat(finalTime)){
                 timeF = parseFloat(timeI) + parseFloat('00.25')
                 timeS = String(timeF).split('.')
-                console.log(timeI+ " - "+(timeS[0]+'.'+timeS[1]))
+
+                console.log((timeI+ " - "+(timeS[0]+':'+timeS[1])).replace(".", ":"))
+                // setTimes([...times, timeI+ "-"+(timeS[0]+':'+timeS[1])])
+                timesSchedule.push((timeI+ " - "+(timeS[0]+':'+timeS[1])).replace(".", ":")) 
                 timeS[1] = parseFloat(timeS[1]) + parseFloat('5')
                 if(parseFloat(timeS[1]) > parseFloat('59')){
                     timeS[0] = parseFloat(timeS[0]) + parseFloat('1')
@@ -38,11 +44,10 @@ function CreatePlan(){
                     break
                 }
             }
-            
-            console.log(time.initialTime+" "+time.finalTime)
         }else{
-            alert("Informe os Horarios!")
+            alert("Por favor, preencha todos os campos.")
         }
+        console.log(timesSchedule)
     }
 
     return(
@@ -61,6 +66,15 @@ function CreatePlan(){
             <input type="time" className="FinalTime" placeholder="Horario Final" onChange={(e) => setTime({ ...time, finalTime: e.target.value})} required/>
             <br />
             <button className="btn btn-primary" onClick={handleSubmit}>Gerar plano de estudos</button>
+            <br />
+            <br />
+            <table>
+                {/* {timesSchedule.map((item, index) => {
+                    return (
+                        <td key={index}>{item}</td>
+                    )
+                })} */}
+            </table>
         </div>
     )
 }
