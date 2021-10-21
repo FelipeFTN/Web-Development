@@ -67,16 +67,33 @@ function CreatePlan(){
             <br />
             <br />
             <table>
+            <thead>
+                        <tr>
+                        <th>Horarios</th>
+                        <th>Domingo</th>
+                        <th>Segunda</th>
+                        <th>Terca</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sabado</th>
+                    </tr>
+                </thead>
+                <tbody>
+
                 {
                     timesSchedule.map((item, index) => {
                         return (
-                            <>
-                                <td key={index}>{item}</td>
-                                <br />
-                            </>
+                            <tr>
+                                <td>{item}</td>
+                                {subjects.map((sItem, sIndex) => {
+                                    return <td key={sIndex}>{sItem}</td>
+                                })}
+                            </tr>
                         )
                     })
                 }
+                </tbody>
             </table>
         </div>
     )
