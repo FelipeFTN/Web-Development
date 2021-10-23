@@ -11,11 +11,6 @@
     background: white;
   }
   /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {   
-    float: left;
-    width: 75%;
-  }
   /* Right column */
   .rightcolumn {
     float: left;
@@ -32,8 +27,6 @@
   }
   .img {
     display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
     width: 100%;
   }
   /* Add a card effect for articles */
@@ -43,14 +36,6 @@
      width: 65%;
      text-align: left;
   }
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
   /* Footer */
   .footer {
     padding: 20px;
