@@ -37,7 +37,8 @@ const getAllPosts = (req, res) => {
 
 }
 const addPost = (req, res) => {
-
+    res.send('Boa, recebemos!')
+    
 }
 
 module.exports = {register, login, getAllPosts, addPost}
