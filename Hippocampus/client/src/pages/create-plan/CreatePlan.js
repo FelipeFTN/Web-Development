@@ -47,7 +47,7 @@ function CreatePlan(){
                 alert("Por favor, preencha todos os campos.")
             }
         }
-        
+        const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
         return(
             <div className="CreatePlan" align="center">
             <Navbar/>
@@ -86,8 +86,10 @@ function CreatePlan(){
                         return (
                             <tr>
                                 <td>{item}</td>
-                                {subjects.map((sItem, sIndex) => {
-                                    return <td key={sIndex}>{sItem}</td>
+                                {subjects
+                                .slice(0, 7)
+                                .map((sItem, sIndex) => {
+                                    return <td key={sIndex}>{shuffle(subjects)[1]}</td>
                                 })}
                             </tr>
                         )
