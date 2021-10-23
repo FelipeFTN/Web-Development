@@ -1,8 +1,8 @@
 const mysql = require('mysql');
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
+    user    :  "root",
+    host    : "localhost",
     password: "secret",
     database: "hippocampus",
 })
@@ -12,7 +12,7 @@ const register = (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
-    db.query("INSERT INTO users (username, password, email) VALUES (?, ?, ?)", [username, password, userEmail],
+    db.query("INSERT INTO tb_user (username, password, email) VALUES (?, ?, ?)", [username, password, userEmail],
     (err, result) => {
         console.log(err)
     })
@@ -21,7 +21,7 @@ const login = (req, res) => {
     const userEmail = req.body.userEmail
     const password = req.body.password
     
-    db.query("SELECT * FROM users WHERE email = ? AND password = ?", [userEmail, password],
+    db.query("SELECT * FROM tb_user WHERE email = ? AND password = ?", [userEmail, password],
     (err, result) => {
         if(err){
             res.send({err: err})
@@ -33,5 +33,11 @@ const login = (req, res) => {
         }
     })
 }
+const getAllPosts = (req, res) => {
 
-module.exports = {register, login}
+}
+const addPost = (req, res) => {
+
+}
+
+module.exports = {register, login, getAllPosts, addPost}

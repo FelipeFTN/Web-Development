@@ -9,5 +9,7 @@ app.use(cors())
 
 app.post('/register', controller.register)
 app.post('/login', controller.login)
+app.post('/post', controller.addPost)
+app.get('/posts', controller.getAllPosts)
 
 app.listen(port, () => console.log('Hippocampus listening on port ' + port + '!'))
