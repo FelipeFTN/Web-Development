@@ -43,7 +43,7 @@ function Community(){
             </div>
 
             <div className="footer">
-                <h2>Footer</h2>
+                <h2><small>&copy; Copyright 2021, Hippocampus</small> </h2>
             </div>
         </div>
     )
