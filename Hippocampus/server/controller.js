@@ -1,4 +1,5 @@
 const mysql = require('mysql');
+const formidable = require('formidable');
 
 const db = mysql.createConnection({
     user    :  "root",
@@ -37,8 +38,11 @@ const getAllPosts = (req, res) => {
 
 }
 const addPost = (req, res) => {
-    res.send('Boa, recebemos!')
-    
+    const form = formidable({ multiples: true });
+    form.parse(req, function (err, fields, files) { //Formidable.parse doc
+    res.send('File uploaded');
+    });
+
 }
 
 module.exports = {register, login, getAllPosts, addPost}
