@@ -8,6 +8,7 @@ function CreatePlan(){
     const [timesSchedule, setTimesSchedule] = useState([]);
     const [time, setTime] = useState({initialTime:"", finalTime:""});
     const [tableStyle, setTableStyle] = useState(false)
+    const [element, setElement] = useState('')
     const handleAddSubject = () => {
         if(subject !== ''){
             setSubjects([...subjects, subject]);
@@ -15,7 +16,9 @@ function CreatePlan(){
             console.log(subjects)
         }
     }
-    const handleRemove = () => {}
+    const handleRemove = (e) => {
+        console.log(e + ': This!')
+    }
     
     const HandleSubmit = () => {
         if(time.initialTime !== "" && time.finalTime !== "" && subjects.length !== 0){
@@ -89,8 +92,8 @@ function CreatePlan(){
                     timesSchedule.map((item, index) => {
                         return (
                             <tr>
-                                <td>{item.replaceAll('.', ':')}</td>
-                                { [...Array(7)].map((e, i) => <td key={i}>{shuffle(subjects)[1]}</td>) }
+                                <td key={index}>{item.replaceAll('.', ':')}</td>
+                                { [...Array(7)].map((e, i) => <td key={i} onClick={() => handleRemove(e)}>{e = shuffle(subjects)[1]}</td>) }
                             </tr>
                         )
                     })
