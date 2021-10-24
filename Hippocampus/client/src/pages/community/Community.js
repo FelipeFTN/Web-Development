@@ -13,17 +13,14 @@ function Community(){
             .then(res => {
                 setData([...data, res.data]);  
             })
-            // console.log(data)
     }, []);
-
-
 
     return(
         <div className="Community">
             <Navbar/>
                 <div className="posts">
                     <div className="createPost">
-                        <h3>Criar Postagem</h3>
+                        <h2>Criar Postagem</h2>
                         <form action="http://localhost:3001/post" enctype="multipart/form-data" method="post">
                             <textarea name="post" cols="30" rows="3" placeholder="Titulo&#10;Subtitulo&#10;Mensagem" required></textarea>
                             <input type="file" name="someExpressFiles" multiple="multiple" required/><br />
