@@ -34,7 +34,7 @@ function Community(){
                             return (
                                 <div className="card">
                                     <h2>{iItem.title}</h2>
-                                    <h5>{iItem.subtitle+" 24 Out, 2021"}</h5>
+                                    <h5>{iItem.subtitle+" 25 Out, 2021"}</h5>
                                     <br />
                                     <p>{iItem.message}</p><br />
                                     <img src={"./images/"+iItem.image} className="img" alt={iItem.subtitle} />
