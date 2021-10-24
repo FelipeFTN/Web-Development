@@ -15,6 +15,14 @@ function CreatePlan(){
             console.log(subjects)
         }
     }
+
+    document.addEventListener ('keypress', (event) => {
+        const keyName = event.key;
+        if(keyName == 'Enter') {
+            handleAddSubject();
+        }
+      });
+
     const HandleSubmit = () => {
         if(time.initialTime !== "" && time.finalTime !== "" && subjects.length !== 0){
                 setTimesSchedule([])
@@ -53,19 +61,29 @@ function CreatePlan(){
         return(
             <div className="CreatePlan" align="center">
             <Navbar/>
-            <h1>Criar Plano</h1>
-            <input type="text" className="Materia" value={subject} placeholder="Materia" onChange={(e) => { setSubject(e.target.value)}}/>
-            <button className="btn btn-primary" onClick={handleAddSubject}>Adicionar</button>
+            <div className="info">
+                <h1>Vamos Criar seu plano! 📚</h1>
+                <p>
+                    Para começarmos a criar seu plano de estudos, precisamos primeiro saber quais matérias você pretende estudar.
+                    Em seguida, precisaremos saber os horários de início e término do seu cronograma.
+                    Com essas informações, podemos aplicar o nosso método de estudos, e criar seu plano baseado nele.
+                </p>
+            </div>
             <br />
-            <ul>
-                {subjects.map((item, index) =>{
-                    return <li key={index} id={"subject"+index}>{item}</li>
-                })}
-            </ul>
-            <input type="time" className="InitialTime" placeholder="Horario Inicial" onChange={(e) => setTime({ ...time, initialTime: e.target.value})} required/>
-            <input type="time" className="FinalTime" placeholder="Horario Final" onChange={(e) => setTime({ ...time, finalTime: e.target.value})} required/>
-            <br />
-            <button className="btn btn-primary" onClick={HandleSubmit}>Gerar plano de estudos</button>
+            <div className="PlanForm">
+                <input type="text" className="Materia" value={subject} placeholder="Materia" onChange={(e) => { setSubject(e.target.value)}}/>
+                <button className="btn btn-primary" onClick={handleAddSubject}>Adicionar</button>
+                <br />
+                <ul>
+                    {subjects.map((item, index) =>{
+                        return <li key={index} id={"subject"+index}>{item}</li>
+                    })}
+                </ul>
+                <input type="time" className="InitialTime" placeholder="Horario Inicial" onChange={(e) => setTime({ ...time, initialTime: e.target.value})} required/>
+                <input type="time" className="FinalTime" placeholder="Horario Final" onChange={(e) => setTime({ ...time, finalTime: e.target.value})} required/>
+                <br />
+                <button className="btn btn-primary" onClick={HandleSubmit}>Gerar plano de estudos</button>
+            </div>
             <br />
             <br />
             <table style={{ visibility: tableStyle ? 'visible' : 'hidden' }}>
@@ -87,7 +105,7 @@ function CreatePlan(){
                     timesSchedule.map((item, index) => {
                         return (
                             <tr>
-                                <td key={index}>{item.replaceAll('.', ':')}</td>
+                                <td key={index} className="time">{item.replaceAll('.', ':')}</td>
                                 { [...Array(7)].map((e, i) => <td key={i}>{shuffle(subjects)[1]}</td>) }
                             </tr>
                         )
@@ -95,6 +113,8 @@ function CreatePlan(){
                 }
                 </tbody>
             </table>
+            <br />
+            <br />
         </div>
     )
 }

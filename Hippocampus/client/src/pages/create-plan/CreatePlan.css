@@ -1,8 +1,39 @@
 input {
     margin: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(214, 214, 214);
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    outline: none;
+}
+input[type="time"]{
+    width: 110px;
+    text-align: center;
 }
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px;
-  }
+    background: #fff;
+}
+th{
+    background: rgba(233, 248, 20, 0.938);
+}
+td.time{
+    background: rgba(25, 201, 255, 0.425);
+}
+li{
+    text-align: center;
+}
+.info{
+    background: #fff;
+    width: 55%;
+    padding: 10px;
+    border-radius: 6px;
+}
+.PlanForm{
+    background: #fff;
+    width: 55%;
+    padding: 50px;
+}
