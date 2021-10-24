@@ -1,0 +1,28 @@
+.logoImage {
+    height: 75px;
+    width: auto;
+    display: inline;
+}
+#title{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(87, 49, 255);
+}
+.home p{
+    font-size: 18px;
+    width: 50%;
+    float: left;
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.6;
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.LogoImage{
+    float: right;
+    width: auto;
+    height: 400px;
+}
