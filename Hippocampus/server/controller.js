@@ -43,14 +43,23 @@ const addPost = (req, res, next) => {
     const form = formidable({ multiples: true });
 
     form.parse(req, (err, fields, files) => {
-      if (err) {
-        next(err);
-        return;
-    }
-    res.json({fields, files})
-      var oldpath = files.someExpressFiles.path;
-      var newpath = '/Users/ftenorio/Desktop/Web-Design/Hippocampus/server/images/' + files.someExpressFiles.name;
-      fs.writeFileSync(newpath, fs.readFileSync(oldpath))
-  });
+        if (err) {
+            next(err);
+            return;
+        }
+        var oldpath = files.someExpressFiles.path;
+        var newpath = '/Users/ftenorio/Desktop/Web-Design/Hippocampus/server/images/' + files.someExpressFiles.name;
+        fs.writeFileSync(newpath, fs.readFileSync(oldpath))
+        let postMessage = fields.post.replace(/\r/g, '')
+        var post = postMessage.split('\n');
+
+        db.query("INSERT INTO tb_post (title, subtitle, message, image) VALUES (?, ?, ?, ?)", [post[0], post[1], post[2], files.someExpressFiles.name],
+        (err, result) => {
+            if(err){
+                res.send({err: err})
+            }
+        })
+        res.redirect('http://localhost:3000/comunidade');
+    })
 }
 module.exports = {register, login, getAllPosts, addPost}
