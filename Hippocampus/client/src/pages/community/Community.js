@@ -27,7 +27,7 @@ function Community(){
                         <form action="http://localhost:3001/post" enctype="multipart/form-data" method="post">
                             <textarea name="post" cols="30" rows="3" placeholder="Titulo&#10;Subtitulo&#10;Mensagem" required></textarea>
                             <input type="file" name="someExpressFiles" multiple="multiple" required/><br />
-                            <input type="submit" value="Postar"/>
+                            <input type="submit" value="Postar" />
                         </form>
                     </div>{
                     data.map((item, index) => {
