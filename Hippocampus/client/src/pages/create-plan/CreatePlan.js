@@ -7,9 +7,11 @@ function CreatePlan(){
     const [subjects, setSubjects] = useState([]);
     const [timesSchedule, setTimesSchedule] = useState([]);
     const [time, setTime] = useState({initialTime:"", finalTime:""});
+    const [tableStyle, setTableStyle] = useState(false)
     const handleAddSubject = () => {
         if(subject !== ''){
             setSubjects([...subjects, subject]);
+            setSubject("")
             console.log(subjects)
         }
     }
@@ -42,17 +44,19 @@ function CreatePlan(){
                         timeS[1] = parseFloat('0')
                         break
                     }
+                    setTableStyle(true)
                 }
             }else{
                 alert("Por favor, preencha todos os campos.")
             }
         }
         const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+
         return(
             <div className="CreatePlan" align="center">
             <Navbar/>
             <h1>Criar Plano</h1>
-            <input type="text" className="Materia" placeholder="Materia" onChange={(e) => { setSubject(e.target.value)}}/>
+            <input type="text" className="Materia" value={subject} placeholder="Materia" onChange={(e) => { setSubject(e.target.value)}}/>
             <button className="btn btn-primary" onClick={handleAddSubject}>Adicionar</button>
             <br />
             <ul>
@@ -66,18 +70,18 @@ function CreatePlan(){
             <button className="btn btn-primary" onClick={HandleSubmit}>Gerar plano de estudos</button>
             <br />
             <br />
-            <table>
+            <table style={{ visibility: tableStyle ? 'visible' : 'hidden' }}>
             <thead>
-                        <tr>
-                        <th>Horarios</th>
-                        <th>Domingo</th>
-                        <th>Segunda</th>
-                        <th>Terca</th>
-                        <th>Quarta</th>
-                        <th>Quinta</th>
-                        <th>Sexta</th>
-                        <th>Sabado</th>
-                    </tr>
+                <tr>
+                    <th>Horarios</th>
+                    <th>Domingo</th>
+                    <th>Segunda</th>
+                    <th>Terca</th>
+                    <th>Quarta</th>
+                    <th>Quinta</th>
+                    <th>Sexta</th>
+                    <th>Sabado</th>
+                </tr>
                 </thead>
                 <tbody>
 
@@ -85,12 +89,8 @@ function CreatePlan(){
                     timesSchedule.map((item, index) => {
                         return (
                             <tr>
-                                <td>{item}</td>
-                                {subjects
-                                .slice(0, 7)
-                                .map((sItem, sIndex) => {
-                                    return <td key={sIndex}>{shuffle(subjects)[1]}</td>
-                                })}
+                                <td>{item.replaceAll('.', ':')}</td>
+                                { [...Array(7)].map((e, i) => <td key={i}>{shuffle(subjects)[1]}</td>) }
                             </tr>
                         )
                     })
