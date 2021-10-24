@@ -2,10 +2,9 @@ const mysql = require('mysql');
 const formidable = require('formidable');
 const fs = require('fs');
 
-
 const db = mysql.createConnection({
-    user    :  "root",
-    host    : "localhost",
+    host: "localhost",
+    user: "root",
     password: "secret",
     database: "hippocampus",
 })
@@ -37,7 +36,10 @@ const login = (req, res) => {
     })
 }
 const getAllPosts = (req, res) => {
-
+    db.query('SELECT * FROM `tb_post` ORDER BY `ID` DESC', function (error, results, fields) {
+        if (error) throw error;
+        res.send(results)
+    });
 }
 const addPost = (req, res, next) => {
     const form = formidable({ multiples: true });
@@ -48,7 +50,7 @@ const addPost = (req, res, next) => {
             return;
         }
         var oldpath = files.someExpressFiles.path;
-        var newpath = '/Users/ftenorio/Desktop/Web-Design/Hippocampus/server/images/' + files.someExpressFiles.name;
+        var newpath = '/Users/ftenorio/Desktop/Web-Design/Hippocampus/client/public/images/' + files.someExpressFiles.name;
         fs.writeFileSync(newpath, fs.readFileSync(oldpath))
         let postMessage = fields.post.replace(/\r/g, '')
         var post = postMessage.split('\n');
