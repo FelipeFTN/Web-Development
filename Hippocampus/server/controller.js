@@ -1,5 +1,7 @@
 const mysql = require('mysql');
 const formidable = require('formidable');
+const fs = require('fs');
+
 
 const db = mysql.createConnection({
     user    :  "root",
@@ -37,12 +39,18 @@ const login = (req, res) => {
 const getAllPosts = (req, res) => {
 
 }
-const addPost = (req, res) => {
+const addPost = (req, res, next) => {
     const form = formidable({ multiples: true });
-    form.parse(req, function (err, fields, files) { //Formidable.parse doc
-    res.send('File uploaded');
-    });
 
+    form.parse(req, (err, fields, files) => {
+      if (err) {
+        next(err);
+        return;
+    }
+    res.json({fields, files})
+      var oldpath = files.someExpressFiles.path;
+      var newpath = '/Users/ftenorio/Desktop/Web-Design/Hippocampus/server/images/' + files.someExpressFiles.name;
+      fs.writeFileSync(newpath, fs.readFileSync(oldpath))
+  });
 }
-
 module.exports = {register, login, getAllPosts, addPost}

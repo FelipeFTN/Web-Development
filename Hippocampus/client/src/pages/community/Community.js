@@ -11,9 +11,9 @@ function Community(){
                 <div className="posts">
                     <div className="createPost">
                         <h3>Criar Postagem</h3>
-                        <form action="http://localhost:3001/post" method="POST">
+                        <form action="http://localhost:3001/post" enctype="multipart/form-data" method="post">
                             <textarea name="post" cols="30" rows="3" placeholder="Titulo&#10;Subtitulo&#10;Mensagem" required></textarea>
-                            <input type="file" name="File" accept="image/*" /><br />
+                            <input type="file" name="someExpressFiles" multiple="multiple" /><br />
                             <input type="submit" value="Postar" />
                         </form>
                     </div>
