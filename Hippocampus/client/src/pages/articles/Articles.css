@@ -1,0 +1,24 @@
+#title{
+    font-size: 45px;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(87, 49, 255);
+}
+.article{
+    background: #fff;
+    width: 50%;
+    margin-left: 25%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    border-radius: 5px;
+}
+.article h1{
+    text-align: center;
+    font-size: 25px;
+}
+.article p{
+    margin: 12px;
+    text-align: justify;
+}

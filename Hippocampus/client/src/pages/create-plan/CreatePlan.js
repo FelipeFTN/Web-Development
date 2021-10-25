@@ -62,7 +62,7 @@ function CreatePlan(){
             <div className="CreatePlan" align="center">
             <Navbar/>
             <div className="info">
-                <h1>Vamos Criar seu plano! 📚</h1>
+                <h1>Vamos Criar seu plano! 📖</h1>
                 <p>
                     Para começarmos a criar seu plano de estudos, precisamos primeiro saber quais matérias você pretende estudar.
                     Em seguida, precisaremos saber os horários de início e término do seu cronograma.
