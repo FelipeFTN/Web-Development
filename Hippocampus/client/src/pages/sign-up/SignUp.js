@@ -14,22 +14,24 @@ function SignUp(){
     return(
         <div className="SignUp">
           <Navbar/>
-          <h1>Registration</h1>
-          <label>Email</label>
-          <input type="text" onChange={(e)=>{
-            setUserEmailReg(e.target.value)
-          }}/>
-          <label>Username</label>
-          <input type="text" onChange={(e) => {
-            setUsernameReg(e.target.value)
-          }}/>
-          <label>Password</label>
-          <input type="text" onChange={(e) => {
-            setPasswordReg(e.target.value)
-          }}/>
-          <button onClick={register}>Register</button>
-          <br />
-          <a href="/login">Já possui uma conta? Faça o Login aqui.</a>
+          <center>
+            <h1>Registration</h1>
+            <label>Email</label>
+            <input type="text" onChange={(e)=>{
+              setUserEmailReg(e.target.value)
+            }}/> <br />
+            <label>Username</label>
+            <input type="text" onChange={(e) => {
+              setUsernameReg(e.target.value)
+            }}/> <br />
+            <label>Password</label>
+            <input type="text" onChange={(e) => {
+              setPasswordReg(e.target.value)
+            }}/> <br />
+            <button onClick={register}>Register</button>
+            <br />
+            <a href="/login">Já possui uma conta? Faça o Login aqui.</a>
+          </center>
         </div>
       )
 }

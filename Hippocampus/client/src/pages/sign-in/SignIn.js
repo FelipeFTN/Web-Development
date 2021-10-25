@@ -21,18 +21,20 @@ function SignIn() {
   return (
     <div className="App">
       <Navbar/>
-      <div className="login">
-        <h1>Login</h1>
-        <input type="text" placeholder="Email" onChange={(e)=>{
-          setUserEmail(e.target.value)
-        }} />
-        <input type="password" placeholder="Password" onChange={(e)=>{
-          setPassword(e.target.value)
-        }}/>
-        <button onClick={login}>Login</button>
-      </div>
-      <h1>{ loginStatus }</h1>
-      <a href="/registro">Não tem uma conta? Crie uma já!</a>
+      <center>
+        <div className="login">
+          <h1>Login</h1>
+          <input type="text" placeholder="Email" onChange={(e)=>{
+            setUserEmail(e.target.value)
+          }} />
+          <input type="password" placeholder="Password" onChange={(e)=>{
+            setPassword(e.target.value)
+          }}/>
+          <button onClick={login}>Login</button>
+        </div>
+        <h1>{ loginStatus }</h1>
+        <a href="/registro">Não tem uma conta? Crie uma já!</a>
+      </center>
     </div>
   );
 }
