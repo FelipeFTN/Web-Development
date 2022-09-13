@@ -1,3 +1,5 @@
 # Remove DS File
-
 .DS_Store
+
+# Remove node_modules
+node_modules/
